@@ -99,16 +99,10 @@ import { AppMenuitemComponent } from './app.menuitem.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { BlocksComponent } from './components/blocks/blocks.component';
-import { CountryService } from './service/countryservice';
-import { CustomerService } from './service/customerservice';
-import { EventService } from './service/eventservice';
 import { IconService } from './service/iconservice';
 import { NodeService } from './service/nodeservice';
-import { PhotoService } from './service/photoservice';
-import { ProductService } from './service/productservice';
 import { MenuService } from './service/app.menu.service';
 import { ConfigService } from './service/app.config.service';
-import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
     imports: [
@@ -211,12 +205,10 @@ import { LoginComponent } from './components/login/login.component';
         ChartsComponent,
         BlocksComponent,
         BlockViewer,
-        LoginComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-        CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService, ConfigService
+        IconService, NodeService, MenuService, ConfigService
     ],
     bootstrap: [AppComponent]
 })

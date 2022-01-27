@@ -28,9 +28,9 @@ export class AppMenuComponent implements OnInit {
     ngOnInit() {
         this.model = [
             {
-                label: 'Home',
+                label: 'Introduction',
                 items:[
-                    {label: 'Dashboard',icon: 'pi pi-fw pi-home', routerLink: ['/']}
+                    {label: 'Start',icon: 'pi pi-fw pi-home', routerLink: ['/']}
                 ]
             },
             {
@@ -43,12 +43,6 @@ export class AppMenuComponent implements OnInit {
                 label:'Prime Blocks',
                 items:[
                     {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks'], badge: 'NEW'}
-                ]
-            },
-            {
-                label: 'Pages',
-                items: [
-                    {label: 'Login', icon: 'pi pi-fw pi-sign-in', routerLink: ['pages/login']}
                 ]
             },
             {
@@ -68,6 +62,20 @@ export class AppMenuComponent implements OnInit {
                             }
                         ]
                     }
+                ]
+            },
+            {
+                label: 'Resources',
+                items: [
+                    {label: 'Complete degree work', icon: 'pi pi-fw pi-external-link'},
+                    {label: 'Datasets', icon: 'pi pi-fw pi-external-link'}
+                ]
+            },
+            {
+                label: 'Downloads',
+                items: [
+                    {label: 'Complete degree work', icon: 'pi pi-fw pi-arrow-down'},
+                    {label: 'Datasets', icon: 'pi pi-fw pi-arrow-down'}
                 ]
             }
         ];
