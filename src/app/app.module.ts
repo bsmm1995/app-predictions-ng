@@ -99,10 +99,9 @@ import { AppMenuitemComponent } from './app.menuitem.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { BlocksComponent } from './components/blocks/blocks.component';
-import { IconService } from './service/iconservice';
-import { NodeService } from './service/nodeservice';
 import { MenuService } from './service/app.menu.service';
 import { ConfigService } from './service/app.config.service';
+import { PredictionsService } from './service/predictionservice';
 
 @NgModule({
     imports: [
@@ -208,7 +207,7 @@ import { ConfigService } from './service/app.config.service';
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-        IconService, NodeService, MenuService, ConfigService
+        MenuService, ConfigService, PredictionsService
     ],
     bootstrap: [AppComponent]
 })

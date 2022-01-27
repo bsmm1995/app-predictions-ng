@@ -67,8 +67,8 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Resources',
                 items: [
-                    {label: 'Complete degree work', icon: 'pi pi-fw pi-external-link'},
-                    {label: 'Datasets', icon: 'pi pi-fw pi-external-link'}
+                    {label: 'Google Colab Notebook', icon: 'pi pi-fw pi-external-link'},
+                    {label: 'GitHub repository', icon: 'pi pi-fw pi-external-link'}
                 ]
             },
             {
