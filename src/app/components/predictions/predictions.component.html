@@ -7,7 +7,7 @@
             <label for="dateformat">Age</label>
             <p-inputNumber
                 inputId="minmax-buttons"
-                [min]="1"
+                [min]="10"
                 [max]="100"
                 [showButtons]="true"
                 inputId="integeronly"
@@ -22,7 +22,6 @@
                 mode="decimal"
                 inputId="minmax-buttons"
                 [min]="0"
-                [max]="100"
                 [showButtons]="true"
                 inputId="minmaxfraction"
                 mode="decimal"
@@ -39,7 +38,6 @@
                 mode="decimal"
                 inputId="minmax-buttons"
                 [min]="0"
-                [max]="100"
                 [showButtons]="true"
                 inputId="minmaxfraction"
                 mode="decimal"
@@ -56,7 +54,6 @@
                 mode="decimal"
                 inputId="minmax-buttons"
                 [min]="0"
-                [max]="100"
                 [showButtons]="true"
                 inputId="minmaxfraction"
                 mode="decimal"
@@ -73,7 +70,6 @@
                 mode="decimal"
                 inputId="minmax-buttons"
                 [min]="0"
-                [max]="100"
                 [showButtons]="true"
                 inputId="minmaxfraction"
                 mode="decimal"
@@ -90,7 +86,6 @@
                 mode="decimal"
                 inputId="minmax-buttons"
                 [min]="0"
-                [max]="100"
                 [showButtons]="true"
                 inputId="minmaxfraction"
                 mode="decimal"
@@ -158,8 +153,8 @@
         icon="pi pi-external-link"
     ></button>
     <p class="card" style="margin-top: 15px">
-        El paciente ingresado
-        <strong>{{ predictResult }}</strong> desarrollará una enfermedad
+        El paciente ingresado puede que
+        <strong>{{ predictResult }}</strong> tenga o desarrolle una enfermedad
         cardíaca.
     </p>
 </div>

@@ -78,7 +78,38 @@ export class PredictionsComponent {
         const data = {
             model: this.prediction.model,
             data: [
-                [38, 1, 3, 0, 2, 1.5, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0],
+                [
+                    this.prediction.age,
+                    this.prediction.restingBP < 120
+                        ? 1
+                        : this.prediction.restingBP >= 120 &&
+                          this.prediction.restingBP < 229
+                        ? 2
+                        : 3,
+                    this.prediction.cholesterol < 200
+                        ? 1
+                        : this.prediction.cholesterol >= 200 &&
+                          this.prediction.cholesterol < 240
+                        ? 2
+                        : 3,
+                    this.prediction.fastingBS,
+                    this.prediction.maxHR < 100 ? 1 : 2,
+                    this.prediction.oldpeak,
+                    this.prediction.sex === 1 ? 1 : 0,
+                    this.prediction.sex === 2 ? 1 : 0,
+                    this.prediction.chestPainType === 1 ? 1 : 0,
+                    this.prediction.chestPainType === 2 ? 1 : 0,
+                    this.prediction.chestPainType === 3 ? 1 : 0,
+                    this.prediction.chestPainType === 4 ? 1 : 0,
+                    this.prediction.restingECG === 1 ? 1 : 0,
+                    this.prediction.restingECG === 2 ? 1 : 0,
+                    this.prediction.restingECG === 3 ? 1 : 0,
+                    this.prediction.exerciseAngina === 1 ? 1 : 0,
+                    this.prediction.exerciseAngina === 2 ? 1 : 0,
+                    this.prediction.ST_Slope === 3 ? 1 : 0,
+                    this.prediction.ST_Slope === 2 ? 1 : 0,
+                    this.prediction.ST_Slope === 1 ? 1 : 0,
+                ],
             ],
         };
 
