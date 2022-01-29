@@ -1,0 +1,165 @@
+<p-toast></p-toast>
+<div class="card">
+    <h2>Data to make the prediction</h2>
+    <p-divider></p-divider>
+    <div class="p-fluid grid formgrid">
+        <div class="field col-12 md:col-2">
+            <label for="dateformat">Age</label>
+            <p-inputNumber
+                inputId="minmax-buttons"
+                [min]="1"
+                [max]="100"
+                [showButtons]="true"
+                inputId="integeronly"
+                [(ngModel)]="prediction.age"
+            >
+            </p-inputNumber>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="basic">RestingBP</label>
+            <p-inputNumber
+                mode="decimal"
+                inputId="minmax-buttons"
+                [min]="0"
+                [max]="100"
+                [showButtons]="true"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="1"
+                [maxFractionDigits]="3"
+                [(ngModel)]="prediction.restingBP"
+            >
+            </p-inputNumber>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="icon">Cholesterol</label>
+            <p-inputNumber
+                mode="decimal"
+                inputId="minmax-buttons"
+                [min]="0"
+                [max]="100"
+                [showButtons]="true"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="1"
+                [maxFractionDigits]="3"
+                [(ngModel)]="prediction.cholesterol"
+            >
+            </p-inputNumber>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="min-max">FastingBS</label>
+            <p-inputNumber
+                mode="decimal"
+                inputId="minmax-buttons"
+                [min]="0"
+                [max]="100"
+                [showButtons]="true"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="1"
+                [maxFractionDigits]="3"
+                [(ngModel)]="prediction.fastingBS"
+            >
+            </p-inputNumber>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="disabledays">MaxHR</label>
+            <p-inputNumber
+                mode="decimal"
+                inputId="minmax-buttons"
+                [min]="0"
+                [max]="100"
+                [showButtons]="true"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="1"
+                [maxFractionDigits]="3"
+                [(ngModel)]="prediction.maxHR"
+            >
+            </p-inputNumber>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="multiple">Oldpeak</label>
+            <p-inputNumber
+                mode="decimal"
+                inputId="minmax-buttons"
+                [min]="0"
+                [max]="100"
+                [showButtons]="true"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="1"
+                [maxFractionDigits]="3"
+                [(ngModel)]="prediction.oldpeak"
+            >
+            </p-inputNumber>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="range">Sex</label>
+            <p-dropdown
+                [options]="Sex"
+                [(ngModel)]="prediction.sex"
+            ></p-dropdown>
+        </div>
+
+        <div class="field col-12 md:col-3">
+            <label for="buttonbar">ChestPainType</label>
+            <p-dropdown
+                [options]="ChestPainType"
+                [(ngModel)]="prediction.chestPainType"
+            ></p-dropdown>
+        </div>
+
+        <div class="field col-12 md:col-3">
+            <label for="time">RestingECG</label>
+            <p-dropdown
+                [options]="RestingECG"
+                [(ngModel)]="prediction.restingECG"
+            ></p-dropdown>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="timeonly">ExerciseAngina</label>
+            <p-dropdown
+                [options]="ExerciseAngina"
+                [(ngModel)]="prediction.exerciseAngina"
+            ></p-dropdown>
+        </div>
+
+        <div class="field col-12 md:col-2">
+            <label for="monthpicker">ST_Slope</label>
+            <p-dropdown
+                [options]="ST_Slope"
+                [(ngModel)]="prediction.ST_Slope"
+            ></p-dropdown>
+        </div>
+    </div>
+    <p-divider></p-divider>
+    <p-dropdown
+        [style]="{ width: '25%' }"
+        [options]="Models"
+        [(ngModel)]="prediction.model"
+    ></p-dropdown>
+    <button
+        (click)="makePrediction()"
+        style="margin-left: 30px"
+        pButton
+        pRipple
+        type="button"
+        label="Make prediction"
+        class="p-button-raised p-button-info p-button-text"
+        icon="pi pi-external-link"
+    ></button>
+    <p class="card" style="margin-top: 15px">
+        El paciente ingresado
+        <strong>{{ predictResult }}</strong> desarrollará una enfermedad
+        cardíaca.
+    </p>
+</div>

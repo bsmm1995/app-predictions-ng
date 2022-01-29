@@ -40,9 +40,9 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label:'Prime Blocks',
+                label:'Predicctions',
                 items:[
-                    {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks'], badge: 'NEW'}
+                    {label: 'Predicctions', icon: 'pi pi-fw pi-eye', routerLink: ['/predictions'], badge: 'NEW'}
                 ]
             },
             {
@@ -68,14 +68,14 @@ export class AppMenuComponent implements OnInit {
                 label: 'Resources',
                 items: [
                     {label: 'Google Colab Notebook', icon: 'pi pi-fw pi-external-link'},
-                    {label: 'GitHub repository', icon: 'pi pi-fw pi-external-link'}
+                    {label: 'GitHub repository', icon: 'pi pi-fw pi-external-link', url: ['https://github.com/bsmm1995/app-predictions-ng'], target: '_blank'}
                 ]
             },
             {
                 label: 'Downloads',
                 items: [
                     {label: 'Complete degree work', icon: 'pi pi-fw pi-arrow-down'},
-                    {label: 'Datasets', icon: 'pi pi-fw pi-arrow-down'}
+                    {label: 'Dataset', icon: 'pi pi-fw pi-arrow-down', url: ['https://github.com/bsmm1995/app-predictions-ng'], target: '_blank'}
                 ]
             }
         ];

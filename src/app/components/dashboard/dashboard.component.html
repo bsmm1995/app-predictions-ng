@@ -1,31 +1,50 @@
 <div class="grid">
-    <div class="col-12 xl:col-6">
-        <p-fieldset legend="Title">
-            <p>
-              Predecir enfermedades del corazón utilizando los algoritmos de
-              machine learning Random Forest y Artificial Neural Networks para
-              clasificación.
-            </p>
-          </p-fieldset>
-          <p-fieldset legend="Abstract">
-            <p>
-              Predecir enfermedades del corazón utilizando los algoritmos de
-              machine learning Random Forest y Artificial Neural Networks para
-              clasificación.
-            </p>
-          </p-fieldset>
+    <div class="col-12">
+        <p-fieldset legend="Título">
+            <h2 style="text-align: center">
+                Predicción de enfermedades del corazón utilizando Random Forest
+                y Artificial Neural Networks
+            </h2>
+        </p-fieldset>
     </div>
+    <div class="grid" style="height: 34vh">
+        <div class="col-12 xl:col-6">
+            <p-fieldset
+                legend="Objetivo general"
+                [style]="{
+                    height: '100%',
+                    display: 'flex',
+                    'align-items': 'center'
+                }"
+            >
+                <p>
+                    Predecir enfermedades del corazón utilizando los algoritmos
+                    de machine learning Random Forest y Artificial Neural
+                    Networks para clasificación.
+                </p>
+            </p-fieldset>
+        </div>
 
-    <div class="col-12 xl:col-6">
-        <p-fieldset legend="Objetivos Específicos">
-            <p-tabView>
-              <p-tabPanel *ngIf="objetives.length == 0" header=""></p-tabPanel>
-              <p-tabPanel *ngFor="let obj of objetives" [header]="obj.name">
-                <P>
-                  {{ obj.objetive }}
-                </P>
-              </p-tabPanel>
-            </p-tabView>
-          </p-fieldset>
+        <div class="col-12 xl:col-6">
+            <p-fieldset
+                legend="Objetivos Específicos"
+                [style]="{ height: '100%' }"
+            >
+                <p-tabView>
+                    <p-tabPanel
+                        *ngIf="objetives.length == 0"
+                        header=""
+                    ></p-tabPanel>
+                    <p-tabPanel
+                        *ngFor="let obj of objetives"
+                        [header]="obj.name"
+                    >
+                        <P>
+                            {{ obj.objetive }}
+                        </P>
+                    </p-tabPanel>
+                </p-tabView>
+            </p-fieldset>
+        </div>
     </div>
 </div>

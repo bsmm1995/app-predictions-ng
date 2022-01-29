@@ -98,10 +98,11 @@ import { AppMenuitemComponent } from './app.menuitem.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChartsComponent } from './components/charts/charts.component';
-import { BlocksComponent } from './components/blocks/blocks.component';
+import { PredictionsComponent } from './components/predictions/predictions.component';
 import { MenuService } from './service/app.menu.service';
 import { ConfigService } from './service/app.config.service';
 import { PredictionsService } from './service/predictionservice';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
     imports: [
@@ -202,12 +203,12 @@ import { PredictionsService } from './service/predictionservice';
         AppMenuitemComponent,
         DashboardComponent,
         ChartsComponent,
-        BlocksComponent,
+        PredictionsComponent,
         BlockViewer,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-        MenuService, ConfigService, PredictionsService
+        MenuService, ConfigService, PredictionsService, MessageService
     ],
     bootstrap: [AppComponent]
 })

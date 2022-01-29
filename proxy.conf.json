@@ -1,0 +1,7 @@
+{
+    "/predict":{
+        "target":"https://predict-heart-diseases-unl.herokuapp.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
