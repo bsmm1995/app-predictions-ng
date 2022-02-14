@@ -36,7 +36,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'UI Components',
                 items: [
-                    {label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts']}
+                    {label: 'Results', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts']}
                 ]
             },
             {
