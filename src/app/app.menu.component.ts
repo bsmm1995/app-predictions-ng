@@ -49,16 +49,13 @@ export class AppMenuComponent implements OnInit {
                 label: 'Hierarchy',
                 items: [
                     {
-                        label: 'Objetives', icon: 'pi pi-fw pi-bookmark',
+                        label: 'Conclusions', icon: 'pi pi-fw pi-bookmark',
                         items: [
                             {
-                                label: 'Objetive 1', icon: 'pi pi-fw pi-bookmark'
+                                label: 'Conclusions 1', icon: 'pi pi-fw pi-bookmark'
                             },
                             {
-                                label: 'Objetive 2', icon: 'pi pi-fw pi-bookmark'
-                            },
-                            {
-                                label: 'Objetive 3', icon: 'pi pi-fw pi-bookmark'
+                                label: 'Conclusions 2', icon: 'pi pi-fw pi-bookmark'
                             }
                         ]
                     }
@@ -67,7 +64,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Resources',
                 items: [
-                    {label: 'Google Colab Notebook', icon: 'pi pi-fw pi-external-link'},
+                    {label: 'Google Colab Notebook', icon: 'pi pi-fw pi-external-link', url: ['https://colab.research.google.com/drive/1bNOIvsezCNiOxrCT4CaPeIGhfRrLGonE'], target: '_blank'},
                     {label: 'GitHub repository', icon: 'pi pi-fw pi-external-link', url: ['https://github.com/bsmm1995/app-predictions-ng'], target: '_blank'}
                 ]
             },
@@ -75,7 +72,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Downloads',
                 items: [
                     {label: 'Complete degree work', icon: 'pi pi-fw pi-arrow-down'},
-                    {label: 'Dataset', icon: 'pi pi-fw pi-arrow-down', url: ['https://github.com/bsmm1995/app-predictions-ng'], target: '_blank'}
+                    {label: 'Dataset', icon: 'pi pi-fw pi-arrow-down', url: ['https://drive.google.com/file/d/1vPVmPr3-VP7xc8GkC5UvwRJG8Vhtv8BK/view?usp=sharing'], target: '_blank'}
                 ]
             }
         ];
